@@ -6,7 +6,7 @@ const SocialSignUp = () => {
     <>
       <div className="flex gap-4">
         <button
-          onClick={() => signIn("google")}
+          //onClick={() => signIn("google")}
           className="flex w-full items-center justify-center gap-2.5 rounded-lg p-3.5 hover:bg-slateGray bg-deepSlate text-white"
         >
           Sign Up
@@ -49,7 +49,7 @@ const SocialSignUp = () => {
         </button>
 
         <button
-          onClick={() => signIn("github")}
+          //onClick={() => signIn("github")}
           className="flex w-full items-center justify-center gap-2.5 rounded-lg p-3.5 hover:bg-slateGray bg-deepSlate text-white"
         >
           Sign Up

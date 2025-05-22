@@ -4,7 +4,7 @@
  - [Demo](https://themewagon.github.io/Crypgo/)
 
 #### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/Crypgo)
+ - [Download from ThemeWagon](https://themewagon.com/themes/crypgo)
 
 ## Getting Started
 
