@@ -1,28 +1,36 @@
-# Datta Able Free Tailwind Admin Template
+# Crypgo – Free Tailwind CSS & Next.js Website Template
 
 #### Preview
 
- - [Demo](https://themewagon.github.io/DattaAble/)
+ - [Demo](https://themewagon.github.io/Crypgo/)
 
 #### Download
- - [Download from ThemeWagon]( https://themewagon.com/themes/DattaAble)
+ - [Download from ThemeWagon]( https://themewagon.com/themes/crypgo)
  
  
 ## Getting Started
 
-Clone from Github 
+1. Clone from Github 
 ```
-git clone https://github.com/themewagon/DattaAble.git
+git clone https://github.com/themewagon/Crypgo.git
 ```
-*no other dependencies required to run the Datta Able Template*
+2. Install Dependencies
+```
+npm i
+```
+3. Run local server
+```
+npm run dev
+```
+
 ## Author
 
-Design and code is completely written by CodedThemes's design and development team.  
+Design and code is completely written by Getnext.jsTemplates design and development team.  
 
 
 ## License
 
- - Design and Code is Copyright &copy; [CodedThemes](https://www.codedthemes.com)
+ - Design and Code is Copyright &copy; [Getnext.jsTemplates](https://getnextjstemplates.com)
  - Licensed cover under [MIT]
  - Distributed by [ThemeWagon](https://themewagon.com)
 
