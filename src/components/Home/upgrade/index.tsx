@@ -1,6 +1,7 @@
 import { upgradeData } from "@/app/api/data";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { getImagePrefix } from "@/utils/utils";
 
 const Upgrade = () => {
   return (
@@ -39,7 +40,7 @@ const Upgrade = () => {
           <div>
             <div className="">
               <Image
-                src="/images/upgrade/img-upgrade.png"
+                src= {`${getImagePrefix()}images/upgrade/img-upgrade.png`}
                 alt="image"
                 width={625}
                 height={580}

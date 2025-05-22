@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Blog } from "@/types/blog";
 import { format } from "date-fns";
 import Link from "next/link";
+import { getImagePrefix } from "@/utils/utils";
 
 const BlogCard = ({ blog }: { blog: Blog }) => {
     const { title, coverImage, excerpt, date, slug } = blog;
@@ -11,7 +12,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             <Link href={`/blog/${slug}`} className="group mb-10 flex items-center gap-9">
                 <div className="overflow-hidden rounded-lg">
                     <Image 
-                        src={coverImage}
+                        src= {`${getImagePrefix()}${coverImage}`}
                         alt="image"
                         width={300}
                         height={250}

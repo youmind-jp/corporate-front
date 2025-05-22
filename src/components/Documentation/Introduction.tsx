@@ -9,6 +9,7 @@ import axiosImg from "/public/images/documentation/axios.svg";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
 import { DocNavigation } from "./DocNavigation";
+import { getImagePrefix } from "@/utils/utils";
 
 export const Introduction = () => {
   const [docNavbarOpen, setDocNavbarOpen] = useState(false);
@@ -73,7 +74,7 @@ export const Introduction = () => {
                   className="lg:w-1/5 md:w-full text-center lg:border-b-0 border-b lg:border-e lg:last:border-e-0 last:border-b-0 border-dark_border border-opacity-60"
                 >
                   <Image
-                    src={item.img}
+                    src= {`${getImagePrefix()}${item.img}`}
                     alt="npm-package"
                     className=" mx-auto w-10 h-10 "
                   />

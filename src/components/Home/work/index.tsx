@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { getImagePrefix } from "@/utils/utils";
 
 const Work = () => {
   const ref = useRef(null);
@@ -53,7 +54,7 @@ const Work = () => {
                 <div key={index} className="flex items-center gap-5">
                   <div className="px-5 py-5 bg-light_grey bg-opacity-30 rounded-full">
                     <Image
-                      src={service.icon}
+                      src= {`${getImagePrefix()}${service.icon}`}
                       alt={`${service.text} icon`}
                       width={40}
                       height={40}
@@ -67,7 +68,7 @@ const Work = () => {
           <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
             <div className="2xl:-mr-40 mt-9 flex justify-center">
               <Image
-                src="/images/work/img-work-with-us.png"
+                src= {`${getImagePrefix()}images/work/img-work-with-us.png`}
                 alt="image"
                 width={600}
                 height={425}

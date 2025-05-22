@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { portfolioData } from "@/app/api/data";
 import { motion } from "framer-motion";
+import { getImagePrefix } from "@/utils/utils";
 
 const Portfolio = () => {
   return (
@@ -15,7 +16,7 @@ const Portfolio = () => {
             className="lg:-ml-32"
           >
             <Image
-              src="/images/portfolio/img-portfolio.png"
+              src= {`${getImagePrefix()}images/portfolio/img-portfolio.png`}
               alt="Crypto Portfolio"
               width={780}
               height={700}
@@ -49,7 +50,7 @@ const Portfolio = () => {
                     <td className="py-5">
                       <div className="bg-primary p-4 rounded-full bg-opacity-20 w-fit">
                         <Image
-                          src={item.image}
+                          src= {`${getImagePrefix()}${item.image}`}
                           alt={item.title}
                           width={35}
                           height={35}

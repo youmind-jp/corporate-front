@@ -3,6 +3,7 @@ import Image from "next/image";
 import { timelineData } from "@/app/api/data";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { getImagePrefix } from "@/utils/utils";
 
 const TimeLine = () => {
   const ref = useRef(null);
@@ -38,7 +39,7 @@ const TimeLine = () => {
             <div className="md:block hidden relative">
               <div>
                 <Image
-                  src="/images/timeline/img-timeline.png"
+                  src= {`${getImagePrefix()}images/timeline/img-timeline.png`} 
                   alt="image"
                   width={1220}
                   height={1000}
@@ -54,7 +55,7 @@ const TimeLine = () => {
                 </div>
                 <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
                   <Image
-                    src="/images/timeline/icon-planning.svg"
+                    src= {`${getImagePrefix()}images/timeline/icon-planning.svg`}
                     alt="Planning"
                     width={44}
                     height={44}
@@ -65,7 +66,7 @@ const TimeLine = () => {
               <div className="absolute lg:top-40 top-36 lg:right-0 -right-20 w-72 flex items-center gap-6">
                 <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm p-6 h-fit rounded-full">
                   <Image
-                    src="/images/timeline/icon-refinement.svg"
+                    src= {`${getImagePrefix()}images/timeline/icon-refinement.svg`}
                     alt="Refinement"
                     width={44}
                     height={44}
@@ -87,7 +88,7 @@ const TimeLine = () => {
                 </div>
                 <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
                   <Image
-                    src="/images/timeline/icon-prototype.svg"
+                    src= {`${getImagePrefix()}images/timeline/icon-prototype.svg`}
                     alt="Prototype"
                     width={44}
                     height={44}
@@ -98,7 +99,7 @@ const TimeLine = () => {
               <div className="absolute lg:bottom-48 bottom-36 lg:right-0 -right-20 w-72 flex items-center gap-6">
                 <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
                   <Image
-                    src="/images/timeline/icon-support.svg"
+                    src= {`${getImagePrefix()}images/timeline/icon-support.svg`}
                     alt="Scale and support"
                     width={44}
                     height={44}
@@ -120,7 +121,7 @@ const TimeLine = () => {
                 <div key={index} className="flex items-center gap-6">
                   <div className="bg-light_grey bg-opacity-45 p-6 rounded-full">
                     <Image
-                      src={item.icon}
+                      src= {`${getImagePrefix()}${item.icon}`}
                       alt={item.title}
                       width={44}
                       height={44}
