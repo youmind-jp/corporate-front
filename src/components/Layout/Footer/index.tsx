@@ -40,10 +40,7 @@ const Footer: FC = () => {
               </Link>
             </div>
             <h3 className="text-white text-24 font-medium sm:mt-20 mt-12">
-              2025 Copyright | Crypgo
-            </h3>
-            <h3 className="text-white text-24 font-medium sm:mt-20 mt-12">
-              Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+              2025 Copright | Crypgo
             </h3>
           </div>
           <div className="lg:col-span-2 md:col-span-3 col-span-6">
