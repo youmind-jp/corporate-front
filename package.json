@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "touch build/.nojekyll && gh-pages -d build --dotfiles"
-  },
+    "deploy":  "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    },
   "dependencies": {
     "@iconify/icons-ion": "^1.2.10",
     "@iconify/react": "^5.0.1",
