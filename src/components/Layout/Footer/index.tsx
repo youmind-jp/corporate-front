@@ -49,8 +49,8 @@ const Footer: FC = () => {
           <div className="lg:col-span-2 md:col-span-3 col-span-6">
             <h4 className="text-white mb-4 font-medium text-24">Links</h4>
             <ul>
-              {headerData.map((item, index) => (
-                <li key={index} className="pb-4">
+              {headerData.map((item) => (
+                <li key={item.label} className="pb-4">
                   <Link
                     href={item.href}
                     className="text-white hover:text-primary text-17"
