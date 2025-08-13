@@ -61,35 +61,32 @@ const Hero = () => {
         <div className="grid grid-cols-12">
           <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
             <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
-              <Image
-                src= {`${getImagePrefix()}images/icons/icon-bag.svg`}
-                alt="icon"
-                width={40}
-                height={40}
-              />
-              <p className="text-white sm:text-28 text-18 mb-0">
-                Crypto On The <span className="text-primary">Go</span>
+              <p className="text-white sm:text-28 text-18 mb-0 font-bold">
+                動くシステム、動き続けるビジネス
               </p>
             </div>
-            <h1 className="font-medium lg:text-76 md:text-70 text-54 lg:text-start text-center text-white mb-10">
-              Buy and Sell <span className="text-primary">Crypto</span> of your{" "}
-              <span className="text-primary">choice</span>!
-            </h1>
+            <div className="font-medium text-16 lg:text-start text-center text-white mb-10">
+              <p className="mb-4">現場の課題を正確に捉え、結果に直結する提案力で、プロジェクトを成功へ導きます。</p>
+              <p>
+                YouMindは、設計から実装、運用まで一貫して対応できる技術パートナーです。
+                成長中の企業や新規事業チームの課題を、現場の実務経験に基づく提案力で最短距離で解決します。
+              </p>
+            </div>
             <div className="flex items-center md:justify-start justify-center gap-8">
               <button
                 className="bg-primary border border-primary rounded-lg text-21 font-medium hover:bg-transparent hover:text-primary text-darkmode py-2 px-7 z-50"
                 onClick={() => setIsBuyingOpen(true)}
               >
-                Buy Crypto
+                事例紹介
               </button>
               <button
                 className="bg-transparent border border-primary rounded-lg text-21 font-medium hover:bg-primary hover:text-darkmode text-primary py-2 px-7"
                 onClick={() => setIsSellingOpen(true)}
               >
-                Sell Crypto
+                お問い合わせ
               </button>
             </div>
-                      </motion.div>
+          </motion.div>
           <motion.div
             {...rightAnimation}
             className="col-span-7 lg:block hidden"
