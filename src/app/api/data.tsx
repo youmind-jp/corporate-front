@@ -86,13 +86,6 @@ export const pricedeta: {
   },
 ];
 
-export const upgradeData: { title: string }[] = [
-  { title: "100% Secure" },
-  { title: "A Fraction of the Cost" },
-  { title: "More Durable" },
-  { title: "Easier to Use" },
-];
-
 export const perksData: {
   icon: string;
   title: string;

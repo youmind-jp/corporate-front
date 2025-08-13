@@ -1,4 +1,3 @@
-import { upgradeData } from "@/app/api/data";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { getImagePrefix } from "@/utils/utils";
@@ -9,32 +8,17 @@ const Upgrade = () => {
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid lg:grid-cols-2 sm:gap-0 gap-10 items-center">
           <div>
-            <p className="text-primary sm:text-28 text-18 mb-3">Upgrade</p>
             <h2 className="text-white sm:text-40 text-30  font-medium mb-5">
-              Upgrade Your Storage Layer
+              代表者
             </h2>
-            <p className="text-muted text-opacity-60 text-18 mb-7">
-              Get faster, safer, more affordable cloud object storage with no
-              centeral point of failure.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:w-70% text-nowrap sm:gap-10 gap-5">
-              {upgradeData.map((item, index) => (
-                <div key={index} className="flex gap-5">
-                  <div>
-                    <Icon
-                      icon="la:check-circle-solid"
-                      width="24"
-                      height="24"
-                      className="text-white group-hover:text-primary"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-18 text-muted text-opacity-60">
-                      {item.title}
-                    </h4>
-                  </div>
-                </div>
-              ))}
+            <div className="mb-8">
+              <h3 className="text-22 text-white font-bold mb-2">武田 憲太郎 — 代表取締役</h3>
+              <p className="text-16 text-white/80 mb-3">
+                25年以上にわたり、Webアプリケーション開発、データベース設計・運用、大規模システムの運用や移行に従事。参加者1,000名を超える国内カンファレンスでの登壇や、Laravel関連のオープンソースプロジェクトへの貢献など、技術コミュニティでも積極的に活動。主にPHP・LaravelやOSS活用の知見を共有し、エコシステムの品質向上にも寄与している。
+              </p>
+              <p className="text-16 text-white/80">
+                現場経験に基づく実践的なアプローチと、課題解決に直結する提案力を強みとする。
+              </p>
             </div>
           </div>
           <div>
