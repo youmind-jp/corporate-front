@@ -1,7 +1,4 @@
 import { HeaderItem } from "@/types/menu";
-import { getImagePrefix } from "@/utils/utils";
-
-
 
 export const headerData: HeaderItem[] = [
   { label: "Services", href: "/#services" },
