@@ -4,15 +4,16 @@ import Link from "next/link";
 
 const Logo: React.FC = () => {
   return (
-    <Link href="/">
-      <Image
-        src={`${getImagePrefix()}images/logo/logo.svg`}
-        alt="logo"
-        width={160}
-        height={50}
-        quality={100}
-      />
-    </Link>
+      <Link href="/">
+        <Image
+          src={`${getImagePrefix()}images/logo/logo.svg`}
+          alt="株式会社ユーマインド"
+          width={160}
+          height={50}
+          quality={100}
+          className="inline-block"
+        />
+      </Link>
   );
 };
 

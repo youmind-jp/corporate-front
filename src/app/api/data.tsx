@@ -1,12 +1,3 @@
-import { title } from "process";
-
-export const footerlabels: { label: string; herf: string }[] = [
-  { label: "Terms", herf: "#" },
-  { label: "Disclosures", herf: "#" },
-  { label: "Disclosures", herf: "#" },
-  { label: "Latest News", herf: "#" },
-];
-
 export const pricedeta: {
   title: string;
   short: string;
