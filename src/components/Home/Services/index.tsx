@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { getImagePrefix } from "@/utils/utils";
 
-const Work = () => {
+const Services = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
@@ -21,7 +21,7 @@ const Work = () => {
   };
 
   return (
-    <section className="md:pt-28" id="work">
+    <section className="md:pt-28" id="services">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div ref={ref} className="grid grid-cols-12 items-center">
           <motion.div
@@ -81,4 +81,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Services;
