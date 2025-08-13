@@ -134,38 +134,6 @@ export const perksData: {
   },
 ];
 
-export const timelineData: {
-  icon: string;
-  title: string;
-  text: string;
-  position: string;
-}[] = [
-  {
-    icon: "/images/timeline/icon-planning.svg",
-    title: "Planning",
-    text: "Map the project's scope and architecture",
-    position: "md:top-0 md:left-0",
-  },
-  {
-    icon: "/images/timeline/icon-refinement.svg",
-    title: "Refinement",
-    text: "Refine and improve your solution",
-    position: "md:top-0 md:right-0",
-  },
-  {
-    icon: "/images/timeline/icon-prototype.svg",
-    title: "Prototype",
-    text: "Build a working prototype to test your product",
-    position: "md:bottom-0 md:left-0",
-  },
-  {
-    icon: "/images/timeline/icon-support.svg",
-    title: "Support",
-    text: "Deploy the product and ensure full support by us",
-    position: "md:bottom-0 md:right-0",
-  },
-];
-
 export const CryptoData: { name: string; price: number }[] = [
   { name: "Bitcoin BTC/USD", price: 67646.84 },
   { name: "Ethereum ETH/USD", price: 2515.93 },

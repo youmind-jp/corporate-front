@@ -1,9 +1,6 @@
 "use client";
-import Image from "next/image";
-import { timelineData } from "@/app/api/data";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { getImagePrefix } from "@/utils/utils";
 
 const TimeLine = () => {
   const ref = useRef(null);
@@ -23,12 +20,8 @@ const TimeLine = () => {
             initial={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-muted sm:text-28 text-18 mb-9">
-              Development <span className="text-primary">timeline</span>
-            </p>
             <h2 className="text-white sm:text-40 text-30 font-medium lg:w-80% mx-auto mb-20">
-              We can enter at any point or help you all the way through the
-              development cycle.
+              事例紹介
             </h2>
           </motion.div>
           <motion.div
@@ -36,105 +29,61 @@ const TimeLine = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="md:block hidden relative">
-              <div>
-                <Image
-                  src= {`${getImagePrefix()}images/timeline/img-timeline.png`} 
-                  alt="image"
-                  width={1220}
-                  height={1000}
-                  className="w-80% mx-auto"
-                />
-              </div>
-              <div className="absolute lg::top-40 top-36 lg:left-0 -left-20 w-72 flex items-center gap-6">
-                <div className="text-right">
-                  <h5 className="text-muted text-28 mb-3">Planning</h5>
-                  <p className="text-18 text-muted text-opacity-60">
-                    Map the project's scope and architecture
-                  </p>
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                  <h3 className="text-24 text-white font-bold mb-2">飲食店向け予約システムのクラウド移行</h3>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">課題</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80 mb-2">
+                    <li>オンプレミス環境で稼働していた予約システムは、性能の限界と保守コストの増大が課題に。</li>
+                    <li>特にデータベースは2000テーブル・400GBと大規模で、移行には長時間の停止が避けられないと懸念されていた。</li>
+                  </ul>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">解決</h4>
+                  <p className="text-16 text-white/80 mb-2">事前検証を重ね、データ移行計画と切替手順を分単位で策定。アプリケーション、データベース、インフラの各レイヤーで並行作業を行える体制を整え、ダウンタイムを最小化。</p>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">結果</h4>
+                  <p className="text-16 text-white/80">予定より短い停止時間でAWSへ移行を完了。移行後はパフォーマンスと可用性が向上し、障害対応の負担も大幅に軽減。</p>
                 </div>
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-planning.svg`}
-                    alt="Planning"
-                    width={44}
-                    height={44}
-                    className="w-16 h-16 "
-                  />
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                  <h3 className="text-24 text-white font-bold mb-2">ECサイトのレスポンス改善</h3>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">課題</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80 mb-2">
+                    <li>検索結果やカート処理の応答に数秒かかり、利用者の離脱が増えていた。</li>
+                  </ul>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">解決</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80 mb-2">
+                    <li>サービスと基幹システムとの間のデータアクセスの構造を見直し、処理の効率化を行った。</li>
+                    <li>データベースの稼働状況を分析し、必要なチューニングを行った。</li>
+                    <li>ページの先読みや画面遷移時の演出など、UX向上による離脱の抑制を行った。</li>
+                  </ul>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">結果</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80">
+                    <li>応答速度を2〜5倍改善。UX改善によってコンバージョン率向上。</li>
+                  </ul>
                 </div>
-              </div>
-              <div className="absolute lg:top-40 top-36 lg:right-0 -right-20 w-72 flex items-center gap-6">
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm p-6 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-refinement.svg`}
-                    alt="Refinement"
-                    width={44}
-                    height={44}
-                  />
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                  <h3 className="text-24 text-white font-bold mb-2">新規サービスの短期立ち上げ</h3>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">課題</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80 mb-2">
+                    <li>PoC開発のため初期はあらゆるコストを限界まで抑える必要があった。</li>
+                    <li>営業計画より、それ以降の機能追加や利用者増加も見込む必要があった。</li>
+                  </ul>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">解決</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80 mb-2">
+                    <li>機能要件を優先度設定により最小限で価値を提供できる要件を絞り込み。</li>
+                    <li>サーバレス技術の積極採用により構築と運用の両面よりインフラコストを削減。</li>
+                    <li>非機能要件や価値に結びつきにくい機能はPaaSを活用し、その後のスケーラビリティを担保。</li>
+                  </ul>
+                  <h4 className="text-18 text-white font-semibold mb-1 mt-4">結果</h4>
+                  <ul className="list-disc pl-5 text-16 text-white/80">
+                    <li>スケジュール通りに安定稼働を開始。</li>
+                    <li>正式サービス開始後も、予定通りの機能追加やスピーディーな設備増強を実現。</li>
+                  </ul>
                 </div>
-                <div className="text-left">
-                  <h5 className="text-muted text-28 mb-3">Refinement</h5>
-                  <p className="text-18 text-muted text-opacity-60">
-                    Refine and improve your solution
-                  </p>
-                </div>
-              </div>
-              <div className="absolute lg:bottom-48 bottom-36 lg:left-0 -left-20 w-72 flex items-center gap-6">
-                <div className="text-right">
-                  <h5 className="text-muted text-28 mb-3">Prototype</h5>
-                  <p className="text-18 text-muted text-opacity-60">
-                    Build a working prototype to test your product
-                  </p>
-                </div>
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-prototype.svg`}
-                    alt="Prototype"
-                    width={44}
-                    height={44}
-                    className="w-16 h-16 "
-                  />
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                  <h3 className="text-24 text-white font-bold mb-2">（空き枠）</h3>
+                  <p className="text-16 text-white/60">事例追加予定</p>
                 </div>
               </div>
-              <div className="absolute lg:bottom-48 bottom-36 lg:right-0 -right-20 w-72 flex items-center gap-6">
-                <div className="bg-light_grey bg-opacity-45 backdrop-blur-sm px-6 py-2 h-fit rounded-full">
-                  <Image
-                    src= {`${getImagePrefix()}images/timeline/icon-support.svg`}
-                    alt="Scale and support"
-                    width={44}
-                    height={44}
-                    className="w-16 h-16"
-                  />
-                </div>
-                <div className="text-left">
-                  <h5 className="text-muted text-nowrap text-28 mb-3">
-                    Support
-                  </h5>
-                  <p className="text-18 text-muted text-opacity-60">
-                    Deploy the product and ensure full support by us
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-8 md:hidden">
-              {timelineData.map((item, index) => (
-                <div key={index} className="flex items-center gap-6">
-                  <div className="bg-light_grey bg-opacity-45 p-6 rounded-full">
-                    <Image
-                      src= {`${getImagePrefix()}${item.icon}`}
-                      alt={item.title}
-                      width={44}
-                      height={44}
-                    />
-                  </div>
-                  <div className="text-start">
-                    <h4 className="text-28 text-muted mb-2">{item.title}</h4>
-                    <p className="text-muted text-opacity-60 text-18">
-                      {item.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </motion.div>
         </div>
