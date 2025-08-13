@@ -20,21 +20,6 @@ const Work = () => {
     transition: { duration: 0.6, delay: 0.4 },
   };
 
-  const services = [
-    {
-      icon: "/images/icons/icon-consulting.svg",
-      text: "Blockchain Consulting",
-    },
-    {
-      icon: "/images/icons/icon-blockchain.svg",
-      text: "Blockchain Solutions",
-    },
-    {
-      icon: "/images/icons/icon-Services.svg",
-      text: "Custom Development",
-    },
-  ];
-
   return (
     <section className="md:pt-28" id="work">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
@@ -43,26 +28,40 @@ const Work = () => {
             {...bottomAnimation}
             className="lg:col-span-7 col-span-12"
           >
-            <p className="sm:text-28 text-18 text-white">
-              Work with <span className="text-primary">us</span>
-            </p>
-            <h2 className="sm:text-40 text-30 text-white lg:w-full md:w-70% font-medium">
-              Successfully launch your blockchain project.
+            <h2 className="sm:text-28 text-18 text-white mb-6">
+              私たちが提供するサービス
             </h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-bold text-white mb-2">システム開発・改善</h3>
+                <ul className="list-disc list-inside text-white/80">
+                  <li>新規システムの構築から既存システムの拡張まで対応</li>
+                  <li>ビジネスの成長に合わせた柔軟な拡張設計</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-2">業務システムの最適化</h3>
+                <ul className="list-disc list-inside text-white/80">
+                  <li>処理速度や安定性を改善し、業務効率を向上</li>
+                  <li>システム障害や性能低下のリスクを低減</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-2">Webサービスの開発・運用</h3>
+                <ul className="list-disc list-inside text-white/80">
+                  <li>サービスの成長に合わせた柔軟なスケーラビリティ</li>
+                  <li>運用課題の早期発見と継続的な改善、機能追加</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-2">インフラ刷新・クラウド化・データ移行</h3>
+                <ul className="list-disc list-inside text-white/80">
+                  <li>大規模データの安全かつ計画的な移行</li>
+                  <li>クラウドやオンプレミスの環境最適化</li>
+                </ul>
+              </div>
+            </div>
             <div className="grid md:grid-cols-2 gap-7 mt-11">
-              {services.map((service, index) => (
-                <div key={index} className="flex items-center gap-5">
-                  <div className="px-5 py-5 bg-light_grey bg-opacity-30 rounded-full">
-                    <Image
-                      src= {`${getImagePrefix()}${service.icon}`}
-                      alt={`${service.text} icon`}
-                      width={40}
-                      height={40}
-                    />
-                  </div>
-                  <p className="text-24 text-muted">{service.text}</p>
-                </div>
-              ))}
             </div>
           </motion.div>
           <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
