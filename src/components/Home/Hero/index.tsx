@@ -89,25 +89,7 @@ const Hero = () => {
                 Sell Crypto
               </button>
             </div>
-            <div className="flex items-center md:justify-start justify-center gap-12 mt-20">
-              <Link href="#" className="hover:scale-110 duration-300">
-                <Image
-                  src={`${getImagePrefix()}images/hero/playstore.png`}
-                  alt="Play Store"
-                  width={240}
-                  height={70}
-                />
-              </Link>
-              <Link href="#" className="hover:scale-110 duration-300">
-                <Image
-                  src= {`${getImagePrefix()}images/hero/applestore.png`}
-                  alt="App Store"
-                  width={240}
-                  height={70}
-                />
-              </Link>
-            </div>
-          </motion.div>
+                      </motion.div>
           <motion.div
             {...rightAnimation}
             className="col-span-7 lg:block hidden"
