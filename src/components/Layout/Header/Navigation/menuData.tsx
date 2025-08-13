@@ -5,6 +5,6 @@ export const headerData: HeaderItem[] = [
   { label: "Case Studies", href: "/#case-studies" },
   { label: "Expertise", href: "/#expertise" },
   { label: "Director", href: "/#director" },
-  { label: "About", href: "/#about" },
+  { label: "Corporate", href: "/#corporate" },
   { label: "Contact", href: "/#contact" },
 ];
