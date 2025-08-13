@@ -86,21 +86,6 @@ export const pricedeta: {
   },
 ];
 
-export const portfolioData: { image: string; title: string }[] = [
-  {
-    image: "/images/portfolio/icon-wallet.svg",
-    title: "Manage your portfolio",
-  },
-  {
-    image: "/images/portfolio/icon-vault.svg",
-    title: "Vault protection",
-  },
-  {
-    image: "/images/portfolio/icon-mobileapp.svg",
-    title: "Mobile apps",
-  },
-];
-
 export const upgradeData: { title: string }[] = [
   { title: "100% Secure" },
   { title: "A Fraction of the Cost" },

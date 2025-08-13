@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { portfolioData } from "@/app/api/data";
 import { motion } from "framer-motion";
 import { getImagePrefix } from "@/utils/utils";
 
@@ -28,44 +27,37 @@ const Portfolio = () => {
             initial={{ y: "100%", opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="sm:text-28 text-18 text-muted mb-4">
-              Cryptocurrency <span className="text-primary">Portfolio</span>
-            </p>
             <h2 className="text-white sm:text-40 text-30 mb-4 font-medium">
-              Create your crypto portfolio today with Cryp
-              <span className="text-primary">Go</span>!
+              技術・対応領域
             </h2>
-            <p className="text-muted text-opacity-60 text-18">
-              Coinbase has a variety of features that make it the best
-              <br className="md:block hidden" /> place to start trading.
-            </p>
-
-            <table className="w-full sm:w-[80%]">
-              <tbody>
-                {portfolioData.map((item, index) => (
-                  <tr
-                    key={index}
-                    className="border-b border-dark_border border-opacity-10"
-                  >
-                    <td className="py-5">
-                      <div className="bg-primary p-4 rounded-full bg-opacity-20 w-fit">
-                        <Image
-                          src= {`${getImagePrefix()}${item.image}`}
-                          alt={item.title}
-                          width={35}
-                          height={35}
-                        />
-                      </div>
-                    </td>
-                    <td className="py-5">
-                      <h4 className="text-muted sm:text-28 text-22 ml-5">
-                        {item.title}
-                      </h4>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <ul className="list-disc pl-5 text-white/80 space-y-4 mt-8">
+              <li>
+                システム開発
+                <ul className="list-disc pl-5 mt-2 text-white/60 text-16">
+                  <li>要件定義 / 設計 / 実装 / 運用保守</li>
+                </ul>
+              </li>
+              <li>
+                データベース
+                <ul className="list-disc pl-5 mt-2 text-white/60 text-16">
+                  <li>設計 / 移行 / 性能チューニング（PostgreSQL, MySQL, Oracle 等）</li>
+                </ul>
+              </li>
+              <li>
+                インフラ
+                <ul className="list-disc pl-5 mt-2 text-white/60 text-16">
+                  <li>AWS設計 / 構築 / 運用</li>
+                </ul>
+              </li>
+              <li>
+                開発技術
+                <ul className="list-disc pl-5 mt-2 text-white/60 text-16">
+                  <li>PHP<br />Laravel / Symfony</li>
+                  <li>TypeScript<br />Next.js / React / NestJS / GraphQL / Vue.js / Angular</li>
+                  <li>Ruby<br />Ruby on Rails</li>
+                </ul>
+              </li>
+            </ul>
           </motion.div>
         </div>
       </div>
