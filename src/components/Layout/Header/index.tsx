@@ -7,8 +7,6 @@ import Logo from "./Logo";
 import Image from "next/image";
 import HeaderLink from "../Header/Navigation/HeaderLink";
 import MobileHeaderLink from "../Header/Navigation/MobileHeaderLink";
-import Signin from "@/components/Auth/SignIn";
-import SignUp from "@/components/Auth/SignUp";
 import { useTheme } from "next-themes";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
@@ -134,7 +132,6 @@ const Header: React.FC = () => {
                       className="text-white hover:text-primary text-24 inline-block me-2"
                     />
                   </button>
-                  <Signin />
                 </div>
               </div>
             )}
@@ -163,7 +160,6 @@ const Header: React.FC = () => {
                       className="text-white hover:text-primary text-24 inline-block me-2"
                     />
                   </button>
-                  <SignUp />
                 </div>
               </div>
             )}
