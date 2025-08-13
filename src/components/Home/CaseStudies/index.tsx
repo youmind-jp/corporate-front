@@ -1,16 +1,7 @@
 "use client";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const CaseStudies = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref);
-
-  const TopAnimation = {
-    initial: { y: "-100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
-    transition: { duration: 0.6, delay: 0.4 },
-  };
   return (
     <section className="md:pt-40 pt-9" id="case-studies">
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md lg:px-16 px-4">
