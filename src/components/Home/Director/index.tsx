@@ -1,13 +1,18 @@
+"use client";
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 import { getImagePrefix } from "@/utils/utils";
+import { motion } from "framer-motion";
 
 const Director = () => {
   return (
     <section className="md:py-40 py-20" id="director">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid lg:grid-cols-2 sm:gap-0 gap-10 items-center">
-          <div>
+          <motion.div
+            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ y: "100%", opacity: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-white sm:text-40 text-30  font-medium mb-5">
               代表者
             </h2>
@@ -20,18 +25,20 @@ const Director = () => {
                 現場経験に基づく実践的なアプローチと、課題解決に直結する提案力を強みとする。
               </p>
             </div>
-          </div>
-          <div>
-            <div className="">
-              <Image
-                src= {`${getImagePrefix()}images/upgrade/img-upgrade.png`}
-                alt="image"
-                width={625}
-                height={580}
-                className="-mr-5"
-              />
-            </div>
-          </div>
+          </motion.div>
+          <motion.div
+            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Image
+              src= {`${getImagePrefix()}images/upgrade/img-upgrade.png`}
+              alt="image"
+              width={625}
+              height={580}
+              className="-mr-5"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
