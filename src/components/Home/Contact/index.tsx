@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import toast, { ToastOptions } from "react-hot-toast";
+
+const toastOptions = {
+    duration: 5000,
+    position: 'bottom-center',
+} as const satisfies ToastOptions
 
 const Contact = () => {
     const [loading, setLoading] = useState(false);
@@ -20,11 +25,12 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
         try {
+            // TODO 問い合わせ送信のAPI実装
             await new Promise((resolve) => setTimeout(resolve, 1500));
-            toast.success("入力されたメールアドレスにお問い合わせの控えをお送りしました。ご回答まで3営業日ほどお待ちください。");
+            toast.success('お問い合わせを承りました。回答まで3営業日ほどお待ちください。', toastOptions);
             setFormData({ company: "", name: "", email: "", message: "" });
         } catch (error) {
-            toast.error("送信に失敗できませんでした。");
+            toast.error('送信できませんでした。', toastOptions);
         } finally {
             setLoading(false);
         }
