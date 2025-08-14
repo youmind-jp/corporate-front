@@ -8,7 +8,7 @@ import Corporate from "@/components/Home/Corporate";
 import { Metadata } from "next";
 import Contact from "@/components/Home/Contact";
 export const metadata: Metadata = {
-  title: "CrypGo",
+  title: "YouMind | ビジネスの課題を技術で解決するWebソリューションパートナー",
 };
 
 export default function Home() {
