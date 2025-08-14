@@ -76,29 +76,3 @@ export const pricedeta: {
     padding: "px-0 py-0",
   },
 ];
-
-export const perksData: {
-  icon: string;
-  title: string;
-  text: string;
-  space: string;
-}[] = [
-  {
-    icon: "/images/perks/icon-support.svg",
-    title: "24/7 Support",
-    text: "Need help? Get your requests solved quickly via support team.",
-    space: "lg:mt-8",
-  },
-  {
-    icon: "/images/perks/icon-community.svg",
-    title: "Community",
-    text: "Join the conversations on our worldwide OKEx communities",
-    space: "lg:mt-14",
-  },
-  {
-    icon: "/images/perks/icon-academy.svg",
-    title: "Academy",
-    text: "Learn blockchain and<br /> crypto for free.",
-    space: "lg:mt-4",
-  },
-];
