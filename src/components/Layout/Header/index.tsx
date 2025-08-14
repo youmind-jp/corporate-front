@@ -1,9 +1,9 @@
-"use client";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { headerData } from "../Header/Navigation/menuData";
-import Logo from "./Logo";
-import HeaderLink from "../Header/Navigation/HeaderLink";
-import MobileHeaderLink from "../Header/Navigation/MobileHeaderLink";
+'use client';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { headerData } from '../Header/Navigation/menuData';
+import Logo from './Logo';
+import HeaderLink from '../Header/Navigation/HeaderLink';
+import MobileHeaderLink from '../Header/Navigation/MobileHeaderLink';
 
 const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -11,41 +11,44 @@ const Header: React.FC = () => {
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll =useCallback(() => {
+  const handleScroll = useCallback(() => {
     setSticky(window.scrollY >= 80);
   }, []);
 
-  const handleClickOutside = useCallback((event: MouseEvent) => {
-    if (
-      mobileMenuRef.current &&
-      !mobileMenuRef.current.contains(event.target as Node) &&
-      navbarOpen
-    ) {
-      setNavbarOpen(false);
-    }
-  }, [navbarOpen]);
+  const handleClickOutside = useCallback(
+    (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        navbarOpen
+      ) {
+        setNavbarOpen(false);
+      }
+    },
+    [navbarOpen],
+  );
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [handleScroll, handleClickOutside]);
 
   useEffect(() => {
     if (navbarOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
   }, [navbarOpen]);
 
   return (
     <header
       className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 ${
-        sticky ? " shadow-lg bg-darkmode pt-5" : "shadow-none md:pt-14 pt-5"
+        sticky ? ' shadow-lg bg-darkmode pt-5' : 'shadow-none md:pt-14 pt-5'
       }`}
     >
       <div className="lg:py-0 py-2">
@@ -76,7 +79,7 @@ const Header: React.FC = () => {
         <div
           ref={mobileMenuRef}
           className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${
-            navbarOpen ? "translate-x-0" : "translate-x-full"
+            navbarOpen ? 'translate-x-0' : 'translate-x-full'
           } z-50`}
         >
           <div className="flex items-center justify-between p-4">

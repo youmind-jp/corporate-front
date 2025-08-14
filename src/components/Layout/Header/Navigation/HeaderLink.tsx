@@ -1,8 +1,8 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import { HeaderItem } from "../../../../types/menu";
-import { usePathname } from "next/navigation";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import { HeaderItem } from '../../../../types/menu';
+import { usePathname } from 'next/navigation';
 
 const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
@@ -25,7 +25,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       <Link
         href={`${item.href}`}
         className={`text-17 flex font-medium hover:text-primary capitalized ${
-          path === item.href ? "text-primary " : " text-muted "
+          path === item.href ? 'text-primary ' : ' text-muted '
         }`}
       >
         {item.label}
@@ -59,8 +59,8 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
               href={subItem.href}
               className={`block px-4 py-2 ${
                 path === subItem.href
-                  ? "bg-primary text-white"
-                  : "text-black dark:text-white hover:bg-primary"
+                  ? 'bg-primary text-white'
+                  : 'text-black dark:text-white hover:bg-primary'
               }`}
             >
               {subItem.label}

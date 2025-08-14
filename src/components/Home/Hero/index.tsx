@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
+'use client';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const rightAnimation = {
@@ -24,7 +24,9 @@ const Hero = () => {
               </h2>
             </div>
             <div className="font-medium text-16 text-start text-white/80 mb-10">
-              <p className="mb-4">現場の課題を正確に捉え、結果に直結する提案力で、プロジェクトを成功へ導きます。</p>
+              <p className="mb-4">
+                現場の課題を正確に捉え、結果に直結する提案力で、プロジェクトを成功へ導きます。
+              </p>
               <p>
                 YouMindは、設計から実装、運用まで一貫して対応できる技術パートナーです。
                 成長中の企業や新規事業チームの課題を、現場の実務経験に基づく提案力で最短距離で解決します。
@@ -49,12 +51,17 @@ const Hero = () => {
             {...rightAnimation}
             className="col-span-7 lg:block hidden relative"
           >
-            <div className="absolute top-0 -left-[400px] z-0 transform translate-x-[320px]" style={{
-              maskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
-            }}>
+            <div
+              className="absolute top-0 -left-[400px] z-0 transform translate-x-[320px]"
+              style={{
+                maskImage:
+                  'linear-gradient(to left, black 85%, transparent 100%)',
+                WebkitMaskImage:
+                  'linear-gradient(to left, black 85%, transparent 100%)',
+              }}
+            >
               <Image
-                src={"/images/hero/moving-system-and-business.webp"}
+                src={'/images/hero/moving-system-and-business.webp'}
                 alt="システムがビジネスを動かしている様子を表現した画像"
                 width={1920}
                 height={1080}
