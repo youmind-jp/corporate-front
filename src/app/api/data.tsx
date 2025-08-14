@@ -102,10 +102,3 @@ export const perksData: {
     space: "lg:mt-4",
   },
 ];
-
-export const CryptoData: { name: string; price: number }[] = [
-  { name: "Bitcoin BTC/USD", price: 67646.84 },
-  { name: "Ethereum ETH/USD", price: 2515.93 },
-  { name: "Bitcoin Cash BTC/USD", price: 366.96 },
-  { name: "Litecoin LTC/USD", price: 61504.54 },
-];
