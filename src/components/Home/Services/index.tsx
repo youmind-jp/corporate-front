@@ -34,28 +34,28 @@ const Services = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">システム開発・改善</h3>
-                <ul className="list-disc list-inside text-white/80">
+                <ul className="list-disc pl-4 text-white/80">
                   <li>新規システムの構築から既存システムの拡張まで対応</li>
                   <li>ビジネスの成長に合わせた柔軟な拡張設計</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">業務システムの最適化</h3>
-                <ul className="list-disc list-inside text-white/80">
+                <ul className="list-disc pl-4 text-white/80">
                   <li>処理速度や安定性を改善し、業務効率を向上</li>
                   <li>システム障害や性能低下のリスクを低減</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">Webサービスの開発・運用</h3>
-                <ul className="list-disc list-inside text-white/80">
+                <ul className="list-disc pl-4 text-white/80">
                   <li>サービスの成長に合わせた柔軟なスケーラビリティ</li>
                   <li>運用課題の早期発見と継続的な改善、機能追加</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">インフラ刷新・クラウド化・データ移行</h3>
-                <ul className="list-disc list-inside text-white/80">
+                <ul className="list-disc pl-4 text-white/80">
                   <li>大規模データの安全かつ計画的な移行</li>
                   <li>クラウドやオンプレミスの環境最適化</li>
                 </ul>
