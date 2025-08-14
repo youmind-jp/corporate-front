@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid grid-cols-12">
           <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
-            <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
+            <div className="flex gap-6 items-center justify-center mb-5 mt-24">
               <h2 className="text-white sm:text-24 text-[min(5vw,1.5rem)] mb-0 font-bold">
                 動くシステム、動き続けるビジネス
               </h2>
