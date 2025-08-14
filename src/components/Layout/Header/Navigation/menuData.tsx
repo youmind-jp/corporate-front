@@ -1,13 +1,10 @@
-import { HeaderItem } from "@/types/menu";
-import { getImagePrefix } from "@/utils/utils";
-
-
+import { HeaderItem } from '@/types/menu';
 
 export const headerData: HeaderItem[] = [
-  { label: "Buy & Sell", href: "/#main-banner" },
-  { label: "Development", href: "/#development" },
-  { label: "Work", href: "/#work" },
-  { label: "Portfolio", href: "/#portfolio" },
-  { label: "Upgrade", href: "/#upgrade" },
-  { label: "Docs", href: "/documentation#version" },
+  { label: 'Services', href: '/#services' },
+  { label: 'Case Studies', href: '/#case-studies' },
+  { label: 'Expertise', href: '/#expertise' },
+  { label: 'Director', href: '/#director' },
+  { label: 'Corporate', href: '/#corporate' },
+  { label: 'Contact', href: '/#contact' },
 ];

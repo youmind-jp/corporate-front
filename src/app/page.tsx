@@ -1,26 +1,26 @@
-import React from "react";
-import Hero from "@/components/Home/Hero";
-import Work from "@/components/Home/work";
-import TimeLine from "@/components/Home/timeline";
-import Platform from "@/components/Home/platform";
-import Portfolio from "@/components/Home/portfolio";
-import Upgrade from "@/components/Home/upgrade";
-import Perks from "@/components/Home/perks";
-import { Metadata } from "next";
+import React from 'react';
+import Hero from '@/components/Home/Hero';
+import Services from '@/components/Home/Services';
+import CaseStudies from '@/components/Home/CaseStudies';
+import Expertise from '@/components/Home/Expertise';
+import Director from '@/components/Home/Director';
+import Corporate from '@/components/Home/Corporate';
+import { Metadata } from 'next';
+import Contact from '@/components/Home/Contact';
 export const metadata: Metadata = {
-  title: "CrypGo",
+  title: 'YouMind | ビジネスの課題を技術で解決するWebソリューションパートナー',
 };
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Work />
-      <TimeLine />
-      <Platform />
-      <Portfolio />
-      <Upgrade />
-      <Perks />
+      <Services />
+      <CaseStudies />
+      <Expertise />
+      <Director />
+      <Corporate />
+      <Contact />
     </main>
   );
 }

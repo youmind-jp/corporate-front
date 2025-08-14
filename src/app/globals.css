@@ -6,12 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
-section{
+section {
   @apply bg-darkmode;
 }
 
-.blog-details p, .blog-details hr {
-  @apply mb-8 ;
+.blog-details p,
+.blog-details hr {
+  @apply mb-8;
 }
 
 .blog-details hr {
