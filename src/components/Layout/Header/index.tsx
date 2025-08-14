@@ -15,10 +15,22 @@ const Header: React.FC = () => {
     setSticky(window.scrollY >= 80);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      mobileMenuRef.current &&
+      !mobileMenuRef.current.contains(event.target as Node) &&
+      navbarOpen
+    ) {
+      setNavbarOpen(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [navbarOpen]);
 
