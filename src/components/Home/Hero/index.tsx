@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import CardSlider from "./slider";
 import { getImagePrefix } from "@/utils/utils";
 
 const Hero = () => {
@@ -69,7 +68,6 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        <CardSlider />
       </div>
       <div className="absolute w-50 h-50 bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1"></div>
     </section>
