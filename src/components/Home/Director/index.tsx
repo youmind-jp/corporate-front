@@ -8,8 +8,8 @@ const Director = () => {
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid lg:grid-cols-2 sm:gap-0 gap-10 items-center">
           <motion.div
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: '100%', opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-white sm:text-40 text-24 font-medium mb-5">
@@ -28,8 +28,8 @@ const Director = () => {
             </div>
           </motion.div>
           <motion.div
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: '-100%', opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
             className="lg:ml-3 w-full"
           >
