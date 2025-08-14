@@ -50,7 +50,9 @@ const Header: React.FC = () => {
     >
       <div className="lg:py-0 py-2">
         <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4">
-          <Logo />
+          <h1>
+            <Logo />
+          </h1>
           <nav className="hidden lg:flex flex-grow items-center gap-8 justify-center">
             {headerData.map((item, index) => (
               <HeaderLink key={index} item={item} />
@@ -78,9 +80,9 @@ const Header: React.FC = () => {
           } z-50`}
         >
           <div className="flex items-center justify-between p-4">
-            <h2 className="text-lg font-bold text-midnight_text dark:text-midnight_text">
+            <h3 className="text-lg font-bold text-midnight_text dark:text-midnight_text">
               <Logo />
-            </h2>
+            </h3>
 
             <button
               onClick={() => setNavbarOpen(false)}
