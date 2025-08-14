@@ -11,7 +11,7 @@ const CaseStudies = () => {
             initial={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-white sm:text-40 text-30 font-medium lg:w-80% mx-auto mb-20">
+            <h2 className="text-white sm:text-40 text-24 font-medium mb-20">
               事例紹介
             </h2>
           </motion.div>

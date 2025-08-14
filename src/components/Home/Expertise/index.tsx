@@ -27,7 +27,7 @@ const Expertise = () => {
             initial={{ y: "100%", opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-white sm:text-40 text-30 mb-4 font-medium">
+            <h2 className="text-white sm:text-40 text-24 mb-4 font-medium">
               技術・対応領域
             </h2>
             <ul className="list-disc pl-4 text-white space-y-4 mt-8">

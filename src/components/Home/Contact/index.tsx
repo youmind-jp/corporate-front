@@ -44,7 +44,7 @@ const Contact = () => {
                 initial={{ y: "-100%", opacity: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h2 className="text-white text-30 font-bold mb-8 text-center">
+                <h2 className="text-white sm:text-40 text-24 mb-8 text-center">
                     お問い合わせ
                 </h2>
             </motion.div>
@@ -115,7 +115,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full py-3 rounded-lg bg-primary text-darkmode font-bold text-18 border border-primary hover:bg-transparent hover:text-primary transition"
+                                className="w-full py-3 rounded-lg bg-primary text-darkmode text-18 border border-primary hover:bg-transparent hover:text-primary transition"
                             >
                                 {loading ? "送信中..." : "送信する"}
                             </button>

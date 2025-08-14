@@ -10,7 +10,7 @@ const Corporate = () => {
         initial={{ y: "-100%", opacity: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-white sm:text-40 text-30 font-medium mb-5 text-center">
+        <h2 className="text-white sm:text-40 text-24 font-medium mb-5 text-center">
           会社概要
         </h2>
       </motion.div>

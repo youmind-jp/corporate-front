@@ -28,7 +28,7 @@ const Services = () => {
             {...bottomAnimation}
             className="lg:col-span-7 col-span-12"
           >
-            <h2 className="sm:text-28 text-18 text-white mb-6">
+            <h2 className="sm:text-40 text-24 text-white mb-6">
               私たちが提供するサービス
             </h2>
             <div className="space-y-6">
