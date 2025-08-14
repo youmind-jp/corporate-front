@@ -1,9 +1,9 @@
 'use client'
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import AOS from "aos"
 import 'aos/dist/aos.css';
 
-const Aoscompo = ({children}:any) => {
+const Aoscompo: React.FC<{children: ReactNode}> = ({children}) => {
     useEffect(() => {
         AOS.init({
             duration: 800,

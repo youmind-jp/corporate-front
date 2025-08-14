@@ -1,8 +1,4 @@
 import React, { FC } from "react";
-import Link from "next/link";
-import { headerData } from "../Header/Navigation/menuData";
-import Image from "next/image";
-import { Icon } from "@iconify/react";
 import Logo from "../Header/Logo";
 
 const Footer: FC = () => {
