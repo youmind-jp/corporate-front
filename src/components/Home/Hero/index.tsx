@@ -65,7 +65,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      <div className="absolute w-[400px] h-[400px] bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full top-28 z-3"></div>
+      <div className="absolute w-[600px] h-[600px] bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-220 rounded-full top-[160px] z-3"></div>
     </section>
   );
 };
