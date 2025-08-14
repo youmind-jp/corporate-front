@@ -1,53 +1,44 @@
-# Copilot Instructions for Crypgo (Next.js + Tailwind CSS)
+# Copilot Instructions for AI Agents
 
-## 概要
+## プロジェクト概要
+- Next.js + Tailwind CSS を使用したコーポレートサイト。主要な UI コンポーネントは `src/components/` 配下に整理。
+- ページ構成は `src/app/` 配下で管理。`layout.tsx` で全体レイアウト、`page.tsx` でトップページ、`not-found.tsx` で404ページを定義。
+- 静的アセットは `public/images/` に格納。
 
-CrypgoはNext.jsとTailwind CSSを用いたWebサイトテンプレートです。UIコンポーネントは機能・ページごとに分割管理され、TypeScriptで型安全に開発されています。
+## 開発・ビルド・デプロイ
+- 開発サーバー起動: `npm run dev`（Turbopack利用）
+- 本番ビルド: `npm run build`
+- 本番サーバー起動: `npm start`
+- Lint: `npm run lint`
+- デプロイ: `npm run deploy`（GitHub Pages用。`out/.nojekyll` を作成し、`gh-pages` コマンドで `out` ディレクトリを公開）
 
-## 主要ディレクトリ・ファイル
+## 主要な設計・パターン
+- コンポーネントは機能ごとにディレクトリ分割（例: `Home/Services`, `Layout/Header/Navigation`）。
+- ナビゲーションデータは `src/components/Layout/Header/Navigation/menuData.tsx` で管理。
+- 型定義は `src/types/` 配下に配置。
+- 共通ユーティリティは `src/utils/` 配下（例: `aos.tsx`）。
+- グローバルCSSは `src/app/globals.css`、Tailwind設定は `tailwind.config.ts`。
 
-- `src/components/`：UIコンポーネント群。`Home/`や`Layout/`などページ・機能ごとにフォルダ分割。
-- `src/app/`：Next.jsのappディレクトリ。`page.tsx`がトップページ、`layout.tsx`が共通レイアウト、`not-found.tsx`が404ページ。
-- `public/images/`：画像・アイコン等の静的アセット。用途ごとにサブフォルダ分割。
-- `src/types/`：TypeScript型定義（例：`menu.ts`、`breadcrumb.ts`）。
-- `src/utils/`：ユーティリティ関数（例：`aos.tsx`、`utils.ts`）。
-- `tailwind.config.ts`・`postcss.config.mjs`：TailwindとPostCSSの設定。
+## 外部ライブラリ・統合
+- アイコン: `@iconify/react` + `@iconify/icons-ion`
+- アニメーション: `aos`, `framer-motion`
+- 通信: `axios`
+- テーマ切替: `next-themes`
+- トースト通知: `react-hot-toast`
 
-## 開発ワークフロー
+## コーディング規約・注意点
+- TypeScript必須。型定義を活用。
+- ESLint/Prettier設定済み。自動整形・静的解析を推奨。
+- ディレクトリ/ファイル命名はキャメルケース。
+- ページ追加時は `src/app/` 配下に新規ファイルを作成。
+- 画像・アセットは `public/images/` 配下に追加。
 
-- 依存インストール：`npm i`
-- 開発サーバ起動：`npm run dev`
-- 本番ビルド：`npm run build`
-- 本番プレビュー：`npm run start`
-- グローバルCSS：`src/app/globals.css`編集
-- Tailwindカスタム：`tailwind.config.ts`編集
-
-## コーディング規約・パターン
-
-- **コンポーネント分割**：各ページ・機能ごとにフォルダ分割。例：`src/components/Home/work/index.tsx`は「仕事」セクション。
-- **TypeScript型定義**：型は`src/types/`で定義し、各コンポーネントでimportして利用。
-- **Next.js App Router**：ページは`src/app/`配下で管理。ルーティングはディレクトリ構造で決定。
-- **Context利用**：グローバルな状態管理は`src/app/api/contex/ToasetContex.tsx`などでContext化。
-- **画像参照**：`public/images/`配下の画像は`next/image`または`<img />`で参照。
-- **アニメーション**：`framer-motion`を利用。例：`useInView`や`motion.div`。
-
-## 外部連携・設計意図
-
-- Figmaデザインは`Figma File/`参照。
-- テンプレート元はThemeWagon（README参照）。
-
-## 具体例
-
-- 新しいホームセクション追加：`src/components/Home/`にフォルダ作成→`src/app/page.tsx`でimport。
-- 型追加：`src/types/`に定義→必要箇所でimport。
-- サービス説明のmd→HTML変換例：`src/components/Home/work/index.tsx`参照。
-
-## 注意事項
-
-- 既存のフォルダ・命名規約に従うこと。
-- 新規コードはTypeScriptで記述。
-- デザインはFigma・既存Tailwindクラスを参考。
+## 参考ファイル
+- `README.md`: テンプレート元情報・基本セットアップ手順
+- `package.json`: スクリプト・依存関係
+- `src/app/layout.tsx`: 全体レイアウト例
+- `src/components/Layout/Header/Navigation/menuData.tsx`: ナビゲーションデータ例
 
 ---
 
-不明点や追加情報が必要な場合は、ユーザーに確認してください。
+不明点や追加したいルールがあれば、フィードバックをお願いします。
