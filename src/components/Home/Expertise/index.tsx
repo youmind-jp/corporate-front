@@ -34,7 +34,7 @@ const Expertise = () => {
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-7 col-span-12 z-10 lg:ml-[150px]"
+            className="lg:col-span-7 col-span-12 z-10 lg:ml-[150px] mb-8"
           >
             <h2 className="sm:text-40 text-24 text-white mb-6">技術・対応領域</h2>
             <ul className="list-disc pl-4 text-white space-y-4 mt-8">
@@ -68,7 +68,7 @@ const Expertise = () => {
           </motion.div>
         </div>
       </div>
-      {/* 画像：SP表示 上部 */}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
