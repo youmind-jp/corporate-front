@@ -8,8 +8,8 @@ const Services = () => {
   const inView = useInView(ref);
 
   const TopAnimation = {
-    initial: { y: "-100%", opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: "-100%", opacity: 0 },
+    initial: { opacity: 0 },
+    animate: inView ? { opacity: 1 } : { opacity: 0 },
     transition: { duration: 0.6, delay: 0.4 },
   };
 
@@ -20,12 +20,12 @@ const Services = () => {
   };
 
   return (
-    <section className="md:pt-28 pt-9" id="services">
-      <div className="container mx-auto lg:max-w-screen-xl px-4">
-        <div ref={ref} className="grid grid-cols-12 items-center">
+  <section className="pt-28 md:pt-40 md:pb-28 py-20 overflow-hidden lg:h-[770px]" id="services">
+      <div className="container mx-auto lg:max-w-screen-xl px-4 relative">
+        <div ref={ref} className="grid grid-cols-12">
           <motion.div
             {...bottomAnimation}
-            className="lg:col-span-7 col-span-12"
+            className="lg:col-span-7 col-span-12 z-10"
           >
             <h2 className="sm:text-40 text-24 text-white mb-6">
               私たちが提供するサービス
@@ -63,19 +63,34 @@ const Services = () => {
             <div className="grid md:grid-cols-2 gap-7 mt-11">
             </div>
           </motion.div>
-          <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
-            <div className="2xl:-mr-40 mt-9 flex justify-center">
+          <motion.div {...TopAnimation} className="col-span-5 lg:block hidden relative">
+            <div className="absolute top-0 -left-[480px] z-0 transform translate-x-[320px]" style={{
+              maskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
+            }}>
               <Image
-                src= {`/images/work/img-work-with-us.png`}
-                alt="image"
-                width={600}
-                height={425}
-                className="lg:w-full"
+                src={"/images/services/the-services-we-provide.webp"}
+                alt="様々なサービスを象徴的に表現した画像"
+                width={1920}
+                height={1080}
+                className="object-cover"
               />
             </div>
           </motion.div>
         </div>
       </div>
+      <motion.div {...TopAnimation} className="lg:hidden w-full flex justify-center items-center">
+        <div className="w-full aspect-[100/45] flex items-center justify-center overflow-hidden relative"  style={{
+          WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 15%, black 85%, transparent 100%)',
+        }}>
+          <Image
+            src={"/images/services/the-services-we-provide.webp"}
+            alt="様々なサービスを象徴的に表現した画像"
+            width={1920}
+            height={1080}
+          />
+        </div>
+      </motion.div>
     </section>
   );
 };

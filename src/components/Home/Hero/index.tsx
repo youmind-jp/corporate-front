@@ -49,16 +49,16 @@ const Hero = () => {
             {...rightAnimation}
             className="col-span-7 lg:block hidden relative"
           >
-            <div className="absolute top-0 -left-[400px] z-0 transform translate-x-[320px]">
+            <div className="absolute top-0 -left-[400px] z-0 transform translate-x-[320px]" style={{
+              maskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
+            }}>
               <Image
                 src={"/images/hero/moving-system-and-business.webp"}
                 alt="システムがビジネスを動かしている様子を表現した画像"
                 width={1920}
                 height={1080}
                 className="object-cover"
-                style={{
-                  maskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
-                }}
                 priority
               />
             </div>
