@@ -15,7 +15,7 @@ const Hero = () => {
       className="relative pt-28 md:pt-40 md:pb-28 py-20 overflow-hidden lg:h-[770px]"
       id="main-banner"
     >
-      <div className="container mx-auto lg:max-w-screen-xl px-4">
+      <div className="container mx-auto lg:max-w-screen-xl px-4 relative">
         <div className="grid grid-cols-12">
           <motion.div className="lg:col-span-5 col-span-12 z-1">
             <div className="flex gap-6 items-center justify-center mb-5 lg:mt-[128px]">
@@ -64,8 +64,9 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
+
+        <div className="absolute w-[600px] h-[600px] bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-220 rounded-full left-0 top-0 z-3"></div>
       </div>
-      <div className="absolute w-[600px] h-[600px] bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-220 rounded-full top-[160px] z-3"></div>
     </section>
   );
 };
