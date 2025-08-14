@@ -5,7 +5,7 @@ import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
 import Aoscompo from "@/utils/aos";
-import ToasterContext from "./api/contex/ToasetContex";
+import { Toaster } from "react-hot-toast";
 const font = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -26,7 +26,9 @@ export default function RootLayout({
             {children}
             <Footer />
           </Aoscompo>
-          <ToasterContext />
+          <div className="z-[99999]">
+            <Toaster />
+          </div>
           <ScrollToTop />
         </ThemeProvider>
       </body>
