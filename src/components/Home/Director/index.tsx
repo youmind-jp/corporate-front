@@ -29,13 +29,13 @@ const Director = () => {
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.6 }}
+            className="lg:ml-3 w-full"
           >
             <Image
-              src= {`/images/upgrade/img-upgrade.png`}
-              alt="image"
-              width={625}
-              height={580}
-              className="-mr-5"
+              src= {`/images/director/director-photo.webp`}
+              alt="代表取締役 武田憲太郎 近影"
+              width={1972}
+              height={1559}
             />
           </motion.div>
         </div>
