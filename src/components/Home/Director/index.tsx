@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Director = () => {
   return (
-    <section className="md:py-40 py-20" id="director">
+    <section className="md:pt-28 pt-9" id="director">
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid lg:grid-cols-2 sm:gap-0 gap-10 items-center">
           <motion.div

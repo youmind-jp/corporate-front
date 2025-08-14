@@ -38,13 +38,13 @@ const Contact = () => {
     };
 
     return (
-        <section className="py-20 bg-darkmode" id="contact">
+        <section className="md:pt-28 pt-9 bg-darkmode" id="contact">
             <motion.div
                 whileInView={{ y: 0, opacity: 1 }}
                 initial={{ y: "-100%", opacity: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <h2 className="text-white sm:text-40 text-24 mb-8 text-center">
+                <h2 className="text-white sm:text-40 text-24 mb-6 lg:mb-20 text-center">
                     お問い合わせ
                 </h2>
             </motion.div>

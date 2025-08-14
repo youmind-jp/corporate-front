@@ -4,13 +4,13 @@ import { motion, useInView } from "framer-motion";
 
 const Corporate = () => {
   return (
-    <section className="md:py-40 py-20" id="corporate">
+    <section className="md:pt-28 pt-9" id="corporate">
       <motion.div
         whileInView={{ y: 0, opacity: 1 }}
         initial={{ y: "-100%", opacity: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-white sm:text-40 text-24 font-medium mb-5 text-center">
+        <h2 className="text-white sm:text-40 text-24 font-medium mb-6 lg:mb-20 text-center">
           会社概要
         </h2>
       </motion.div>
