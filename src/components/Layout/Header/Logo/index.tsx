@@ -7,7 +7,7 @@ const Logo: React.FC = () => {
       <Link href="/">
         <Image
           src={`${getImagePrefix()}images/logo/logo.svg`}
-          alt="株式会社ユーマインド"
+          alt="株式会社ユーマインド | ビジネスの課題を技術で解決するWebソリューションパートナー"
           width={160}
           height={50}
           quality={100}
