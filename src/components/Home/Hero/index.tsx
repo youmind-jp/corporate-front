@@ -39,7 +39,7 @@ const Hero = () => {
                 成長中の企業や新規事業チームの課題を、現場の実務経験に基づく提案力で最短距離で解決します。
               </p>
             </div>
-            <div className="flex items-center md:justify-start justify-center gap-8">
+            <div className="flex items-center justify-center gap-8">
               <Link
                 className="bg-primary border border-primary rounded-lg text-21 font-medium hover:bg-transparent hover:text-primary text-darkmode py-2 px-7 z-50"
                 href="/#case-studies"
