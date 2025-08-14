@@ -22,7 +22,7 @@ const Corporate = () => {
       >
         <div className="container mx-auto lg:max-w-screen-xl px-4">
           <div className="mb-8">
-            <dl className="w-full bg-dark_grey bg-opacity-60  max-w-3xl mx-auto rounded-xl overflow-hidden">
+            <dl className="w-full bg-dark_grey bg-opacity-60 max-w-3xl mx-auto rounded-xl overflow-hidden">
               <div className="grid grid-cols-2 border-b border-slateGray">
                 <dt className="px-6 py-4 font-semibold text-white bg-dark_grey/80">会社名</dt>
                 <dd className="px-6 py-4 text-white">株式会社ユーマインド</dd>

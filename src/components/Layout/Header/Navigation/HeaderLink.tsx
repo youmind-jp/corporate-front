@@ -24,7 +24,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
     >
       <Link
         href={`${item.href}`}
-        className={`text-17 flex font-medium hover:text-primary capitalized  ${
+        className={`text-17 flex font-medium hover:text-primary capitalized ${
           path === item.href ? "text-primary " : " text-muted "
         }`}
       >
@@ -57,7 +57,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
             <Link
               key={index}
               href={subItem.href}
-              className={`block px-4 py-2   ${
+              className={`block px-4 py-2 ${
                 path === subItem.href
                   ? "bg-primary text-white"
                   : "text-black dark:text-white hover:bg-primary"
