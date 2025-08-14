@@ -63,7 +63,7 @@ const Contact = () => {
                                     id="company"
                                     type="text"
                                     name="company"
-                                    placeholder="会社名ユーマインド"
+                                    placeholder="株式会社ユーマインド"
                                     value={formData.company}
                                     onChange={handleChange}
                                     autoComplete="organization"
