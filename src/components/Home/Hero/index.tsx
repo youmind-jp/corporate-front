@@ -4,29 +4,21 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const leftAnimation = {
-    initial: { x: "-100%", opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: "-100%", opacity: 0 },
-    transition: { duration: 0.6 },
-  };
-
   const rightAnimation = {
-    initial: { x: "100%", opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: "100%", opacity: 0 },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
     transition: { duration: 0.6 },
   };
 
   return (
     <section
-      className="relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1"
+      className="relative pt-28 md:pt-40 md:pb-28 py-20 overflow-hidden lg:h-[770px]"
       id="main-banner"
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4">
         <div className="grid grid-cols-12">
-          <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
-            <div className="flex gap-6 items-center justify-center mb-5 mt-24">
+          <motion.div className="lg:col-span-5 col-span-12 z-1">
+            <div className="flex gap-6 items-center justify-center mb-5 lg:mt-[128px]">
               <h2 className="text-white sm:text-24 text-[min(5vw,1.5rem)] mb-0 font-bold">
                 動くシステム、動き続けるビジネス
               </h2>
@@ -55,20 +47,25 @@ const Hero = () => {
           </motion.div>
           <motion.div
             {...rightAnimation}
-            className="col-span-7 lg:block hidden"
+            className="col-span-7 lg:block hidden relative"
           >
-            <div className="ml-20 -mr-64">
+            <div className="absolute top-0 -left-[400px] z-0 transform translate-x-[320px]">
               <Image
-                src= {`/images/hero/banner-image.png`}
-                alt="Banner"
-                width={1150}
-                height={1150}
+                src={"/images/hero/moving-system-and-business.webp"}
+                alt="システムがビジネスを動かしている様子を表現した画像"
+                width={1920}
+                height={1080}
+                className="object-cover"
+                style={{
+                  maskImage: 'linear-gradient(to left, black 85%, transparent 100%)',
+                }}
+                priority
               />
             </div>
           </motion.div>
         </div>
       </div>
-      <div className="absolute w-50 h-50 bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full -top-64 -right-14 -z-1"></div>
+      <div className="absolute w-[400px] h-[400px] bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-400 rounded-full top-28 z-3"></div>
     </section>
   );
 };
