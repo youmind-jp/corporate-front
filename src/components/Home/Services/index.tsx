@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { getImagePrefix } from "@/utils/utils";
 
 const Services = () => {
   const ref = useRef(null);
@@ -67,7 +66,7 @@ const Services = () => {
           <motion.div {...TopAnimation} className="lg:col-span-5 col-span-12">
             <div className="2xl:-mr-40 mt-9 flex justify-center">
               <Image
-                src= {`${getImagePrefix()}images/work/img-work-with-us.png`}
+                src= {`/images/work/img-work-with-us.png`}
                 alt="image"
                 width={600}
                 height={425}

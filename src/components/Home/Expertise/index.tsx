@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getImagePrefix } from "@/utils/utils";
 
 const Expertise = () => {
   return (
@@ -15,7 +14,7 @@ const Expertise = () => {
             className="lg:-ml-32"
           >
             <Image
-              src= {`${getImagePrefix()}images/portfolio/img-portfolio.png`}
+              src= {`/images/portfolio/img-portfolio.png`}
               alt="Crypto Portfolio"
               width={780}
               height={700}

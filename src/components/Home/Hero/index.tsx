@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { getImagePrefix } from "@/utils/utils";
 
 const Hero = () => {
   const leftAnimation = {
@@ -60,7 +59,7 @@ const Hero = () => {
           >
             <div className="ml-20 -mr-64">
               <Image
-                src= {`${getImagePrefix()}images/hero/banner-image.png`}
+                src= {`/images/hero/banner-image.png`}
                 alt="Banner"
                 width={1150}
                 height={1150}

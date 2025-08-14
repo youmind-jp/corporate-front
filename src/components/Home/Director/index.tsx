@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { getImagePrefix } from "@/utils/utils";
 import { motion } from "framer-motion";
 
 const Director = () => {
@@ -32,7 +31,7 @@ const Director = () => {
             transition={{ duration: 0.6 }}
           >
             <Image
-              src= {`${getImagePrefix()}images/upgrade/img-upgrade.png`}
+              src= {`/images/upgrade/img-upgrade.png`}
               alt="image"
               width={625}
               height={580}

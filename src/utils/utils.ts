@@ -1,3 +1,0 @@
-const getImagePrefix = () =>'';
-
-export { getImagePrefix };
