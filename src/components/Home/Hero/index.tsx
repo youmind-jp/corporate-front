@@ -28,11 +28,11 @@ const Hero = () => {
         <div className="grid grid-cols-12">
           <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
             <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
-              <p className="text-white sm:text-28 text-18 mb-0 font-bold">
+              <h2 className="text-white sm:text-24 text-[min(5vw,1.5rem)] mb-0 font-bold">
                 動くシステム、動き続けるビジネス
-              </p>
+              </h2>
             </div>
-            <div className="font-medium text-16 lg:text-start text-center text-white mb-10">
+            <div className="font-medium text-16 text-start text-white/80 mb-10">
               <p className="mb-4">現場の課題を正確に捉え、結果に直結する提案力で、プロジェクトを成功へ導きます。</p>
               <p>
                 YouMindは、設計から実装、運用まで一貫して対応できる技術パートナーです。
