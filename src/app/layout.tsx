@@ -6,6 +6,8 @@ import { ThemeProvider } from 'next-themes';
 import ScrollToTop from '@/components/ScrollToTop';
 import Aoscompo from '@/utils/aos';
 import { Toaster } from 'react-hot-toast';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 const font = DM_Sans({ subsets: ['latin'] });
 
 export default function RootLayout({
@@ -31,6 +33,7 @@ export default function RootLayout({
           </div>
           <ScrollToTop />
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-2D6PC1Y36K" />
       </body>
     </html>
   );
