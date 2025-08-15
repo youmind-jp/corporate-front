@@ -47,12 +47,16 @@ const Contact = () => {
         { validateStatus: () => true },
       );
 
-      response.data.error
-        ? toast.error(response.data.error, toastOptions)
-        : toast.success(
-            'お問い合わせを承りました。回答まで3営業日ほどお待ちください。',
-            toastOptions,
-          );
+      if (response.data.error) {
+        toast.error(response.data.error, toastOptions);
+
+        return;
+      }
+
+      toast.success(
+        'お問い合わせを承りました。回答まで3営業日ほどお待ちください。',
+        toastOptions,
+      );
 
       setFormData({ company: '', name: '', email: '', message: '' });
 
