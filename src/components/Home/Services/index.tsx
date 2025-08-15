@@ -7,18 +7,6 @@ const Services = () => {
   const ref = useRef(null);
   const inView = useInView(ref);
 
-  const TopAnimation = {
-    initial: { opacity: 0 },
-    animate: inView ? { opacity: 1 } : { opacity: 0 },
-    transition: { duration: 0.6, delay: 0.4 },
-  };
-
-  const bottomAnimation = {
-    initial: { y: '100%', opacity: 0 },
-    animate: inView ? { y: 0, opacity: 1 } : { y: '100%', opacity: 0 },
-    transition: { duration: 0.6, delay: 0.4 },
-  };
-
   return (
     <section
       className="pt-28 md:pt-40 md:pb-28 py-20 overflow-hidden lg:h-[770px]"
@@ -27,7 +15,9 @@ const Services = () => {
       <div className="container mx-auto lg:max-w-screen-xl px-4 relative">
         <div ref={ref} className="grid grid-cols-12">
           <motion.div
-            {...bottomAnimation}
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.6 }}
             className="lg:col-span-7 col-span-12 z-10"
           >
             <h2 className="sm:text-40 text-24 text-white mb-6">
@@ -74,7 +64,9 @@ const Services = () => {
             <div className="grid md:grid-cols-2 gap-7 mt-11"></div>
           </motion.div>
           <motion.div
-            {...TopAnimation}
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.6 }}
             className="col-span-5 lg:block hidden relative"
           >
             <div
@@ -98,7 +90,9 @@ const Services = () => {
         </div>
       </div>
       <motion.div
-        {...TopAnimation}
+        whileInView={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        transition={{ duration: 0.6 }}
         className="lg:hidden w-full flex justify-center items-center"
       >
         <div

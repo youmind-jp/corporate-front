@@ -7,8 +7,8 @@ const CaseStudies = () => {
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md lg:px-0 px-4">
         <div className="text-center">
           <motion.div
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: '-100%', opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-white sm:text-40 text-24 font-medium mb-6 lg:mb-20">

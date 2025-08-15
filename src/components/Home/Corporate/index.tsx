@@ -5,8 +5,8 @@ const Corporate = () => {
   return (
     <section className="md:pt-28 pt-9" id="corporate">
       <motion.div
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: '-100%', opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.8, opacity: 0 }}
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-white sm:text-40 text-24 font-medium mb-6 lg:mb-20 text-center">

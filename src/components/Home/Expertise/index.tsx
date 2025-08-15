@@ -11,9 +11,9 @@ const Expertise = () => {
       <div className="container mx-auto lg:max-w-screen-xl px-4 relative">
         <div className="grid grid-cols-12">
           <motion.div
-            initial={{ y: '-100%', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.6 }}
             className="col-span-5 lg:block hidden relative"
           >
             <div
@@ -36,9 +36,9 @@ const Expertise = () => {
           </motion.div>
 
           <motion.div
-            initial={{ y: '100%', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.6 }}
             className="lg:col-span-7 col-span-12 z-10 lg:ml-[150px] mb-8"
           >
             <h2 className="sm:text-40 text-24 text-white mb-6">
@@ -92,9 +92,9 @@ const Expertise = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        transition={{ duration: 0.6 }}
         className="lg:hidden w-full flex justify-center items-center"
       >
         <div
