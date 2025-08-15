@@ -54,10 +54,8 @@ const Expertise = () => {
               <li>
                 <h3>データベース</h3>
                 <ul className="list-disc pl-4 mt-2 text-white/80 text-16">
-                  <li>
-                    設計 / 移行 / 性能チューニング（PostgreSQL, MySQL, Oracle
-                    等）
-                  </li>
+                  <li>設計 / 移行 / 性能チューニング</li>
+                  <li>PostgreSQL / MySQL / SQLite / Aurora</li>
                 </ul>
               </li>
               <li>

@@ -57,7 +57,16 @@ const Services = () => {
                 </h3>
                 <ul className="list-disc pl-4 text-white/80">
                   <li>大規模データの安全かつ計画的な移行</li>
-                  <li>クラウドやオンプレミスの環境最適化</li>
+                  <li>クラウドやオンプレミスの環境やコストを最適化</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-2">
+                  顧問・講師・アドバイザー
+                </h3>
+                <ul className="list-disc pl-4 text-white/80">
+                  <li>体制構築・エンジニア教育・レビュー</li>
+                  <li>運用支援・内製化支援</li>
                 </ul>
               </div>
             </div>
