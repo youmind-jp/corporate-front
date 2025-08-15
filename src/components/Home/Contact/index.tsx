@@ -38,10 +38,14 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('/api/contact', {
-        ...formData,
-        'g-recaptcha-response': recaptchaToken,
-      });
+      const response = await axios.post(
+        '/api/contact',
+        {
+          ...formData,
+          'g-recaptcha-response': recaptchaToken,
+        },
+        { validateStatus: () => true },
+      );
 
       response.data.error
         ? toast.error(response.data.error, toastOptions)
