@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import toast, { ToastOptions } from 'react-hot-toast';
 import { motion } from 'framer-motion';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const toastOptions = {
   duration: 5000,
@@ -136,6 +137,12 @@ const Contact = () => {
                   className="w-full px-4 py-3 rounded-md border border-dark_border bg-transparent text-white focus:border-primary focus-visible:outline-0 placeholder:text-white/40"
                 />
               </div>
+
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                className="flex justify-center"
+              />
+
               <button
                 type="submit"
                 disabled={loading}
