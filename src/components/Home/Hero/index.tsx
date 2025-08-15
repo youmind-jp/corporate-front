@@ -17,7 +17,7 @@ const Hero = () => {
     >
       <div className="container mx-auto lg:max-w-screen-xl px-4 relative">
         <div className="grid grid-cols-12">
-          <motion.div className="lg:col-span-5 col-span-12 z-1">
+          <div className="lg:col-span-5 col-span-12 z-1">
             <div className="flex gap-6 items-center justify-center mb-5 lg:mt-[128px]">
               <h2 className="text-white sm:text-24 text-[min(5vw,1.5rem)] mb-0 font-bold">
                 動くシステム、動き続けるビジネス
@@ -46,7 +46,8 @@ const Hero = () => {
                 お問い合わせ
               </Link>
             </div>
-          </motion.div>
+          </div>
+
           <motion.div
             {...rightAnimation}
             className="col-span-7 lg:block hidden relative"
