@@ -36,6 +36,7 @@ const Contact = () => {
       );
       setFormData({ company: '', name: '', email: '', message: '' });
     } catch (error) {
+      console.error(error);
       toast.error('送信できませんでした。', toastOptions);
     } finally {
       setLoading(false);
