@@ -1,50 +1,42 @@
-# Copilot Instructions for AI Agents
+# Copilot Instructions for `corporate-front`
 
-## プロジェクト概要
+## プロジェクト全体像
 
-- Next.js + Tailwind CSS を使用したコーポレートサイト。主要な UI コンポーネントは `src/components/` 配下に整理。
-- ページ構成は `src/app/` 配下で管理。`layout.tsx` で全体レイアウト、`page.tsx` でトップページ、`not-found.tsx` で404ページを定義。
-- 静的アセットは `public/images/` に格納。
+- **Next.js (App Router) + TypeScript + Tailwind CSS** を中心とした企業向けWebサイト。
+- ページは `src/app/` 配下で管理。各セクションは `src/components/Home/` に分割。
+- ルートレイアウト (`src/app/layout.tsx`) で `ThemeProvider`（ダークモード対応）、AOS（アニメーション）、Header/Footer/ScrollToTop をラップ。
 
-## 開発・ビルド・デプロイ
+## 主要な構成・データフロー
 
-- 開発サーバー起動: `npm run dev`（Turbopack利用）
-- 本番ビルド: `npm run build`
-- 本番サーバー起動: `npm start`
-- Lint: `npm run lint`
-- デプロイ: `npm run deploy`（GitHub Pages用。`out/.nojekyll` を作成し、`gh-pages` コマンドで `out` ディレクトリを公開）
+- **Header/Navigation**: `src/components/Layout/Header/` で sticky/モバイル対応。メニューは `menuData.tsx` で定義、型は `src/types/menu.ts`。
+- **API**: `src/app/api/contact/route.ts` はローカル開発用ダミー。実運用では外部API連携なし。
+- **画像・アセット**: `public/images/` 配下に全て格納。`next/image` で最適化（ただし `next.config.mjs` で unoptimized 設定）。
+- **AOS**: `src/utils/aos.tsx` で全体ラップ。`Aoscompo` を使うことで、各セクションで `data-aos` 属性を利用可能。
+- **Tailwind**: カスタムカラー・サイズ多数（`tailwind.config.ts` 参照）。`globals.css` で一部セクションに共通スタイル適用。
 
-## 主要な設計・パターン
+## 開発・ビルド・CI/CD
 
-- コンポーネントは機能ごとにディレクトリ分割（例: `Home/Services`, `Layout/Header/Navigation`）。
-- ナビゲーションデータは `src/components/Layout/Header/Navigation/menuData.tsx` で管理。
-- 型定義は `src/types/` 配下に配置。
-- 共通ユーティリティは `src/utils/` 配下（例: `aos.tsx`）。
-- グローバルCSSは `src/app/globals.css`、Tailwind設定は `tailwind.config.ts`。
+- **開発サーバ**: `npm run dev`（Turbopack利用、Next.js 15系）
+- **ビルド**: `npm run build`
+- **Lint/Format**: `npm run lint`（ESLint）、`npm run fix`（ESLint+Prettier自動修正）
+- **CI**: `.github/workflows/test.yml` で lint/build 実行
+- **デプロイ**: `.github/workflows/deploy.yml`（stgブランチpush時、S3/CloudFrontへ自動デプロイ）
 
-## 外部ライブラリ・統合
+## コーディング規約・独自パターン
 
-- アイコン: `@iconify/react` + `@iconify/icons-ion`
-- アニメーション: `aos`, `framer-motion`
-- 通信: `axios`
-- テーマ切替: `next-themes`
-- トースト通知: `react-hot-toast`
+- **型定義**: TypeScript厳守。Propsは明示、型は `src/types/` で管理。
+- **importパス**: `@/` エイリアス利用（`tsconfig.json` 設定済み）。
+- **クライアントコンポーネント**: `'use client'` 宣言必須（UI/UX系はほぼクライアント）。
+- **日本語UI**: テキスト・メッセージは日本語。
+- **ESLint/Prettier**: `.eslintrc.json` で Next.js/Prettier拡張を利用。
+- **API**: `api/contact/route.ts` はローカル開発用のみ、本番では未使用。
 
-## コーディング規約・注意点
+## 参考実装例
 
-- TypeScript必須。型定義を活用。
-- ESLint/Prettier設定済み。自動整形・静的解析を推奨。
-- ディレクトリ/ファイル命名はキャメルケース。
-- ページ追加時は `src/app/` 配下に新規ファイルを作成。
-- 画像・アセットは `public/images/` 配下に追加。
-
-## 参考ファイル
-
-- `README.md`: テンプレート元情報・基本セットアップ手順
-- `package.json`: スクリプト・依存関係
-- `src/app/layout.tsx`: 全体レイアウト例
-- `src/components/Layout/Header/Navigation/menuData.tsx`: ナビゲーションデータ例
+- `src/components/Home/Hero/index.tsx`：アニメーション・リンク・画像最適化の具体例
+- `src/components/Layout/Header/index.tsx`：sticky/モバイルメニュー制御
+- `src/utils/aos.tsx`：AOS初期化ラッパー
 
 ---
 
-不明点や追加したいルールがあれば、フィードバックをお願いします。
+ご不明点や追加したい情報があればご指摘ください。内容の精度向上のため、フィードバックをお願いします。
