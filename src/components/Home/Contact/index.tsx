@@ -1,8 +1,9 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import toast, { ToastOptions } from 'react-hot-toast';
 import { motion } from 'framer-motion';
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
 
 const toastOptions = {
   duration: 5000,
@@ -19,7 +20,7 @@ const Contact = () => {
   });
 
   const [isFormValid, setIsFormValid] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string|null>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -37,13 +38,24 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      // TODO 問い合わせ送信のAPI実装
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      toast.success(
-        'お問い合わせを承りました。回答まで3営業日ほどお待ちください。',
-        toastOptions,
-      );
+      const response = await axios.post('/api/contact', {
+        ...formData,
+        'g-recaptcha-response': recaptchaToken,
+      });
+
+      response.data.error
+        ? toast.error(
+            response.data.error,
+            toastOptions,
+          )
+        : toast.success(
+            'お問い合わせを承りました。回答まで3営業日ほどお待ちください。',
+            toastOptions,
+          );
+
       setFormData({ company: '', name: '', email: '', message: '' });
+
+      setIsFormValid(false);
     } catch (error) {
       console.error(error);
       toast.error('送信できませんでした。', toastOptions);
@@ -71,7 +83,11 @@ const Contact = () => {
       >
         <div className="container mx-auto lg:max-w-screen-xl px-4">
           <div className="bg-dark_grey bg-opacity-80 rounded-xl p-10 shadow-lg w-full max-w-3xl mx-auto">
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 w-full">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-6 w-full"
+            >
               <div className="w-full">
                 <label
                   htmlFor="company"
