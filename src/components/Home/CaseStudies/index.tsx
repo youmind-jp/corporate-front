@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const CaseStudies = () => {
   return (
     <section className="md:pt-28 pt-9" id="case-studies">
-      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md lg:px-16 px-4">
+      <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md lg:px-0 px-4">
         <div className="text-center">
           <motion.div
             whileInView={{ y: 0, opacity: 1 }}
@@ -22,7 +22,7 @@ const CaseStudies = () => {
           >
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-4 lg:p-8 flex flex-col items-start">
                   <h3 className="text-24 text-white font-bold mb-2">
                     ECサイトのCVR向上と運用改善
                   </h3>
@@ -62,7 +62,7 @@ const CaseStudies = () => {
                   </ul>
                 </div>
 
-                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-4 lg:p-8 flex flex-col items-start">
                   <h3 className="text-24 text-white font-bold mb-2">
                     店舗向け業務支援SaaSのクラウド移行
                   </h3>
@@ -103,7 +103,7 @@ const CaseStudies = () => {
                   </ul>
                 </div>
 
-                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-4 lg:p-8 flex flex-col items-start">
                   <h3 className="text-24 text-white font-bold mb-2">
                     新規事業のPoC立ち上げと内製化支援
                   </h3>
@@ -148,7 +148,7 @@ const CaseStudies = () => {
                   </ul>
                 </div>
 
-                <div className="bg-light_grey bg-opacity-30 rounded-xl p-8 flex flex-col items-start">
+                <div className="bg-light_grey bg-opacity-30 rounded-xl p-4 lg:p-8 flex flex-col items-start">
                   <h3 className="text-24 text-white font-bold mb-2">
                     ネットワークゲームのサーバ開発
                   </h3>
