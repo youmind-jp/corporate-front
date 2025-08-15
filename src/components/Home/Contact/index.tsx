@@ -1,7 +1,9 @@
 'use client';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import toast, { ToastOptions } from 'react-hot-toast';
 import { motion } from 'framer-motion';
+import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
 
 const toastOptions = {
   duration: 5000,
@@ -17,24 +19,43 @@ const Contact = () => {
     message: '',
   });
 
+  const [isFormValid, setIsFormValid] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
+
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    setIsFormValid(formRef.current?.checkValidity() ?? false);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     try {
-      // TODO 問い合わせ送信のAPI実装
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      toast.success(
-        'お問い合わせを承りました。回答まで3営業日ほどお待ちください。',
-        toastOptions,
-      );
+      const response = await axios.post('/api/contact', {
+        ...formData,
+        'g-recaptcha-response': recaptchaToken,
+      });
+
+      response.data.error
+        ? toast.error(
+            response.data.error,
+            toastOptions,
+          )
+        : toast.success(
+            'お問い合わせを承りました。回答まで3営業日ほどお待ちください。',
+            toastOptions,
+          );
+
       setFormData({ company: '', name: '', email: '', message: '' });
+
+      setIsFormValid(false);
     } catch (error) {
       console.error(error);
       toast.error('送信できませんでした。', toastOptions);
@@ -62,7 +83,11 @@ const Contact = () => {
       >
         <div className="container mx-auto lg:max-w-screen-xl px-4">
           <div className="bg-dark_grey bg-opacity-80 rounded-xl p-10 shadow-lg w-full max-w-3xl mx-auto">
-            <form onSubmit={handleSubmit} className="space-y-6 w-full">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-6 w-full"
+            >
               <div className="w-full">
                 <label
                   htmlFor="company"
@@ -136,10 +161,17 @@ const Contact = () => {
                   className="w-full px-4 py-3 rounded-md border border-dark_border bg-transparent text-white focus:border-primary focus-visible:outline-0 placeholder:text-white/40"
                 />
               </div>
+
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                onChange={(token) => setRecaptchaToken(token)}
+                className="flex justify-center"
+              />
+
               <button
                 type="submit"
-                disabled={loading}
-                className="w-full py-3 rounded-lg bg-primary text-darkmode text-18 border border-primary hover:bg-transparent hover:text-primary transition"
+                disabled={loading || !isFormValid || !recaptchaToken}
+                className="w-full py-3 rounded-lg bg-primary text-darkmode text-18 border border-primary enabled:hover:bg-transparent enabled:hover:text-primary transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? '送信中...' : '送信する'}
               </button>
