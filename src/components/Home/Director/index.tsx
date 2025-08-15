@@ -12,7 +12,7 @@ const Director = () => {
             initial={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-white sm:text-40 text-24 font-medium mb-5">
+            <h2 className="text-white sm:text-40 text-24 font-medium mb-6">
               代表者
             </h2>
             <div className="mb-8">
