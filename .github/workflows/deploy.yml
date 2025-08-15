@@ -1,0 +1,40 @@
+name: deploy
+on:
+  push:
+    branches:
+      - stg
+
+jobs:
+  deploy:
+    name: "Deploy"
+    runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: ap-northeast-1
+    steps:
+      - uses: kanga333/variable-mapper@master
+        with:
+          key: '${{ github.ref_name }}'
+          map: |
+            {
+              "stg": {
+                "AWS_ACCESS_KEY_ID": "${{ secrets.STG_AWS_ACCESS_KEY_ID }}",
+                "AWS_SECRET_ACCESS_KEY": "${{ secrets.STG_AWS_SECRET_ACCESS_KEY }}",
+                "S3_BUCKET_NAME": "${{ vars.STG_S3_BUCKET_NAME }}",
+                "CLOUDFRONT_DISTRIBUTION_ID": "${{ vars.STG_CLOUDFRONT_DISTRIBUTION_ID }}"
+              }
+            }
+
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - run: npm i
+
+      - run: npm run build
+
+      - run: aws s3 sync --no-progress --delete --exact-timestamps ./out/ s3://${{ env.S3_BUCKET_NAME }}/
+
+      - run: aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
