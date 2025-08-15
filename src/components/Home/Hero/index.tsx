@@ -61,6 +61,8 @@ const Hero = () => {
             />
           </div>
         </div>
+
+        <div className="absolute w-[600px] h-[600px] bg-gradient-to-bl from-tealGreen from-50% to-charcoalGray to-60% blur-220 rounded-full left-0 top-[100px] z-3 hidden lg:block"></div>
       </div>
     </section>
   );
