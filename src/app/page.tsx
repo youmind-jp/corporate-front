@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   description:
     '業務システムやWebサービスの開発・改善からクラウド化まで、規模やフェーズを問わず一貫支援。実運用に根ざした最適化で、性能・信頼性・コストをバランス良く改善し、成果に直結する基盤を構築します。',
   alternates: { canonical: 'https://youmind.jp/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://youmind.jp/',
+    images: [{ url: 'https://youmind.jp/images/ogimage.png' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [{ url: 'https://youmind.jp/images/ogimage.png' }],
+  },
 };
 
 export default function Home() {
