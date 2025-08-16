@@ -17,7 +17,7 @@ const Hero = () => {
                 動くシステム、動き続けるビジネス
               </h2>
             </div>
-            <div className="font-medium text-16 text-start mb-10">
+            <div className="text-white font-medium text-16 text-start mb-10">
               <p className="mb-4">
                 現場の課題を正確に捉え、結果に直結する提案力で、プロジェクトを成功へ導きます。
               </p>
