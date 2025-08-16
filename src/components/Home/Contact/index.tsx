@@ -87,7 +87,7 @@ const Contact = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto lg:max-w-screen-xl px-4">
-          <div className="bg-dark_grey bg-opacity-80 rounded-xl p-10 shadow-lg w-full max-w-3xl mx-auto">
+          <div className="bg-dark_grey bg-opacity-80 rounded-xl p-4 sm:p-8 shadow-lg w-full max-w-3xl mx-auto">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
