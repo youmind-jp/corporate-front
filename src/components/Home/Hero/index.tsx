@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="z-1 lg:w-[480px] md:max-w-[768px] absolute w-[calc(100%-30px)] mx-auto">
             <div className="flex justify-center mb-5 lg:mt-[128px]">
               <h2 className="text-white sm:text-24 text-[min(5vw,1.5rem)] mb-0 font-bold">
-                動くシステム、動き続けるビジネス
+                動くシステム、動き続けるビジネス。
               </h2>
             </div>
             <div className="text-white font-medium text-16 text-start mb-10">
