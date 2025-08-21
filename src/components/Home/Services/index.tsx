@@ -26,7 +26,7 @@ const Services = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">
-                  システム開発・改善
+                  システム設計・開発・改善
                 </h3>
                 <ul className="list-disc pl-4 text-white/80">
                   <li>新規システムの構築から既存システムの拡張まで対応</li>
